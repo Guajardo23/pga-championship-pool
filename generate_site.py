@@ -19,6 +19,7 @@ entries = [
     ("Brandon", ["Rory McIlroy", "Scottie Scheffler", "Matt Fitzpatrick", "Cameron Young", "Ludvig \u00c5berg"]),
     ("Ben",     ["Scottie Scheffler", "Rory McIlroy", "Cameron Young", "Jacob Bridgeman", "Alex Fitzpatrick"]),
     ("Milo",    ["Cameron Young", "Matt Fitzpatrick", "Scottie Scheffler", "Rickie Fowler", "Brooks Koepka"]),
+    ("Billy",   ["Rory McIlroy", "Scottie Scheffler", "Cameron Young", "Matt Fitzpatrick", "Ludvig \u00c5berg"]),
 ]
 
 # -- 2026 PGA Championship purse: $19M. Standard PGA Tour payout structure ---

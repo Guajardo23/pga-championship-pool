@@ -6,8 +6,7 @@ entries = [
     ("Brian",   ["Scottie Scheffler", "Rory McIlroy", "Cameron Young", "Collin Morikawa", "Tyrrell Hatton"]),
     ("Brandon", ["Rory McIlroy", "Scottie Scheffler", "Matt Fitzpatrick", "Cameron Young", "Ludvig \u00c5berg"]),
     ("Ben",     ["Scottie Scheffler", "Rory McIlroy", "Cameron Young", "Jacob Bridgeman", "Alex Fitzpatrick"]),
-    ("Milo",    ["Cameron Young", "Matt Fitzpatrick", "Scottie Scheffler", "Rickie Fowler", "Brooks Koepka"]),
-]
+    ("Milo",    ["Cameron Young", "Matt Fitzpatrick", "Scottie Scheffler", "Rickie Fowler", "Brooks Koepka"]),    ("Billy",   ["Rory McIlroy","Scottie Scheffler","Cameron Young","Matt Fitzpatrick","Ludvig \u00c5berg"]),]
 
 with open(r"C:\Users\jjg\SandboxSpace\PGAPool\PGAPool\earnings.json", encoding="utf-8") as f:
     earn = json.load(f)
