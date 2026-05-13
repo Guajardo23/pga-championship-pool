@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+update_log.txt
+earnings.json
+~$*

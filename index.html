@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 PGA Championship Pool</title>
+<style>
+  :root {
+    --pga-navy: #00205B;
+    --dark-navy: #001740;
+    --pga-gold: #C8A951;
+    --light-gold: #e8d9a0;
+    --bg: #f4f5f7;
+    --card-bg: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #6c757d;
+    --border: #dee2e6;
+    --red: #dc3545;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); min-height: 100vh;
+  }
+  .header {
+    background: linear-gradient(135deg, var(--pga-navy), var(--dark-navy));
+    color: white; padding: 2rem 1rem; text-align: center;
+  }
+  .header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .header .subtitle { font-size: 1rem; opacity: 0.85; }
+  .header .year {
+    font-size: 3rem; font-weight: 800;
+    color: var(--pga-gold); letter-spacing: 2px;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem; }
+  .updated { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; }
+
+  .status-banner {
+    background: var(--pga-gold); color: #333;
+    text-align: center; padding: 0.7rem;
+    font-weight: 600; font-size: 0.95rem;
+    border-radius: 8px; margin-bottom: 1.5rem;
+  }
+  .status-banner.projected { background: #d6e4f0; color: #0d3b66; }
+  .status-banner.final { background: var(--pga-navy); color: white; font-size: 1.1rem; }
+
+  /* Leaderboard */
+  .leaderboard {
+    width: 100%; border-collapse: collapse;
+    background: var(--card-bg); border-radius: 12px;
+    overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+  }
+  .leaderboard th {
+    background: var(--pga-navy); color: white;
+    padding: 0.75rem 1rem; text-align: left;
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .leaderboard th.money { text-align: right; }
+  .leaderboard td {
+    padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.95rem;
+  }
+  .leaderboard td.money {
+    text-align: right; font-weight: 700;
+    font-variant-numeric: tabular-nums; font-size: 1rem;
+    color: var(--pga-navy);
+  }
+  .leaderboard tr:last-child td { border-bottom: none; }
+  .leaderboard tr:hover { background: #f0f4fa; }
+  .leaderboard tr.top { background: #eef2f9; }
+  .rank {
+    display: inline-block; min-width: 2rem;
+    text-align: center; font-weight: 700; font-size: 1.1rem;
+  }
+  .contestant-name { font-weight: 600; font-size: 1.05rem; }
+  .best-golfer { color: var(--text-muted); font-size: 0.8rem; margin-left: 0.5rem; }
+
+  /* Pick cards */
+  .picks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 1rem; margin-bottom: 2rem;
+  }
+  .pick-card {
+    background: var(--card-bg); border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06); overflow: hidden;
+  }
+  .pick-card-header {
+    background: var(--pga-navy); color: white;
+    padding: 0.6rem 1rem; display: flex;
+    justify-content: space-between; align-items: center;
+  }
+  .pick-card-header .name { font-weight: 700; font-size: 1.05rem; }
+  .pick-card-header .total { font-weight: 600; color: var(--pga-gold); }
+  .pick-card-header .rank-num {
+    background: var(--pga-gold); color: #333;
+    border-radius: 50%; width: 1.6rem; height: 1.6rem;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 0.8rem; margin-right: 0.5rem;
+  }
+  .pick-card table { width: 100%; border-collapse: collapse; }
+  .pick-card td {
+    padding: 0.45rem 0.75rem; border-bottom: 1px solid #f0f0f0; font-size: 0.88rem;
+  }
+  .pick-card tr:last-child td { border-bottom: none; }
+  .pick-card .golfer-name { font-weight: 500; }
+  .pick-card .score { color: var(--text-muted); text-align: center; min-width: 4rem; white-space: nowrap; }
+  .pick-card .score.under-par { color: var(--red); font-weight: 600; }
+  .pick-card .pick-amt {
+    text-align: right; font-variant-numeric: tabular-nums;
+    color: var(--text-muted); min-width: 5rem;
+  }
+  .pick-card .pick-amt.has-earnings { color: var(--pga-navy); font-weight: 600; }
+
+  .pos {
+    display: inline-block; background: #e9ecef;
+    border-radius: 4px; padding: 0.1rem 0.4rem;
+    font-size: 0.75rem; font-weight: 700; margin-right: 0.35rem;
+    min-width: 2rem; text-align: center;
+  }
+  .pos.pos-leader { background: var(--pga-gold); color: #333; }
+  .pos.pos-top10 { background: #d6e4f0; color: #0d3b66; }
+  .pos.mc { background: #f8d7da; color: #721c24; }
+
+  .commentary {
+    background: linear-gradient(135deg, #001740, #00205B);
+    color: white; border-radius: 12px; padding: 2rem;
+    margin-bottom: 2rem; line-height: 1.7;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .commentary h2 {
+    color: var(--pga-gold); font-size: 1.4rem;
+    margin-bottom: 1rem; font-style: italic;
+  }
+  .commentary .champion {
+    color: var(--pga-gold); font-weight: 700;
+  }
+  .commentary .jab {
+    color: #f8d7da; font-style: italic;
+  }
+  .commentary .sign-off {
+    margin-top: 1rem; font-size: 0.85rem;
+    opacity: 0.7; text-align: right;
+  }
+
+  .footer {
+    text-align: center; color: var(--text-muted);
+    font-size: 0.8rem; padding: 2rem 0;
+  }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.4rem; }
+    .header .year { font-size: 2rem; }
+    .picks-grid { grid-template-columns: 1fr; }
+    .leaderboard th, .leaderboard td { padding: 0.5rem 0.5rem; font-size: 0.85rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="year">2026</div>
+  <h1>PGA Championship Pool</h1>
+  <div class="subtitle">Aronimink Golf Club &middot; Newtown Square, PA</div>
+</div>
+
+<div class="container">
+  <div class="updated">Last updated: May 13, 2026 at 12:46 PM</div>
+  <div class="status-banner projected">🏌️ Projected Standings: Not Started — Not Started</div>
+
+
+  <h2 style="margin-bottom:0.75rem;">Leaderboard</h2>
+  <table class="leaderboard">
+    <thead>
+      <tr>
+        <th style="width:3rem;">#</th>
+        <th>Contestant</th>
+        <th class="money">Projected Earnings</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="top">
+        <td><span class="rank gold">🥇</span></td>
+        <td><span class="contestant-name">JJ</span></td>
+        <td class="money">-</td>
+      </tr>
+      <tr class="top">
+        <td><span class="rank gold">🥇</span></td>
+        <td><span class="contestant-name">Geoff</span></td>
+        <td class="money">-</td>
+      </tr>
+      <tr class="top">
+        <td><span class="rank gold">🥇</span></td>
+        <td><span class="contestant-name">Brian</span></td>
+        <td class="money">-</td>
+      </tr>
+      <tr class="top">
+        <td><span class="rank gold">🥇</span></td>
+        <td><span class="contestant-name">Brandon</span></td>
+        <td class="money">-</td>
+      </tr>
+      <tr class="top">
+        <td><span class="rank gold">🥇</span></td>
+        <td><span class="contestant-name">Ben</span></td>
+        <td class="money">-</td>
+      </tr>
+      <tr class="top">
+        <td><span class="rank gold">🥇</span></td>
+        <td><span class="contestant-name">Milo</span></td>
+        <td class="money">-</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="margin-bottom:0.75rem;">Picks</h2>
+  <div class="picks-grid">
+    <div class="pick-card">
+      <div class="pick-card-header">
+        <span><span class="rank-num">1</span><span class="name">JJ</span></span>
+        <span class="total">-</span>
+      </div>
+      <table>
+        <tr><td class="golfer-name">Rory McIlroy</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Scottie Scheffler</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Xander Schauffele</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Tommy Fleetwood</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Matt Fitzpatrick</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+      </table>
+    </div>
+    <div class="pick-card">
+      <div class="pick-card-header">
+        <span><span class="rank-num">1</span><span class="name">Geoff</span></span>
+        <span class="total">-</span>
+      </div>
+      <table>
+        <tr><td class="golfer-name">Rory McIlroy</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Scottie Scheffler</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Jon Rahm</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Brooks Koepka</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Cameron Young</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+      </table>
+    </div>
+    <div class="pick-card">
+      <div class="pick-card-header">
+        <span><span class="rank-num">1</span><span class="name">Brian</span></span>
+        <span class="total">-</span>
+      </div>
+      <table>
+        <tr><td class="golfer-name">Scottie Scheffler</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Rory McIlroy</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Cameron Young</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Collin Morikawa</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Tyrrell Hatton</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+      </table>
+    </div>
+    <div class="pick-card">
+      <div class="pick-card-header">
+        <span><span class="rank-num">1</span><span class="name">Brandon</span></span>
+        <span class="total">-</span>
+      </div>
+      <table>
+        <tr><td class="golfer-name">Rory McIlroy</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Scottie Scheffler</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Matt Fitzpatrick</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Cameron Young</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Ludvig Åberg</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+      </table>
+    </div>
+    <div class="pick-card">
+      <div class="pick-card-header">
+        <span><span class="rank-num">1</span><span class="name">Ben</span></span>
+        <span class="total">-</span>
+      </div>
+      <table>
+        <tr><td class="golfer-name">Scottie Scheffler</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Rory McIlroy</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Cameron Young</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Jacob Bridgeman</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Alex Fitzpatrick</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+      </table>
+    </div>
+    <div class="pick-card">
+      <div class="pick-card-header">
+        <span><span class="rank-num">1</span><span class="name">Milo</span></span>
+        <span class="total">-</span>
+      </div>
+      <table>
+        <tr><td class="golfer-name">Cameron Young</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Matt Fitzpatrick</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Scottie Scheffler</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Rickie Fowler</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+        <tr><td class="golfer-name">Brooks Koepka</td><td class="score">E</td><td class="pick-amt">-</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    6 contestants &middot; 5 picks each &middot; highest combined earnings wins<br>
+    Projected earnings based on current leaderboard position and $19M purse
+  </div>
+</div>
+
+</body>
+</html>
