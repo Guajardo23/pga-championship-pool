@@ -6,7 +6,14 @@ entries = [
     ("Brian",   ["Scottie Scheffler", "Rory McIlroy", "Cameron Young", "Collin Morikawa", "Tyrrell Hatton"]),
     ("Brandon", ["Rory McIlroy", "Scottie Scheffler", "Matt Fitzpatrick", "Cameron Young", "Ludvig \u00c5berg"]),
     ("Ben",     ["Scottie Scheffler", "Rory McIlroy", "Cameron Young", "Jacob Bridgeman", "Alex Fitzpatrick"]),
-    ("Milo",    ["Cameron Young", "Matt Fitzpatrick", "Scottie Scheffler", "Rickie Fowler", "Brooks Koepka"]),    ("Billy",   ["Rory McIlroy","Scottie Scheffler","Cameron Young","Matt Fitzpatrick","Ludvig \u00c5berg"]),]
+    ("Milo",    ["Cameron Young", "Matt Fitzpatrick", "Scottie Scheffler", "Rickie Fowler", "Brooks Koepka"]),
+    ("Billy",   ["Rory McIlroy", "Scottie Scheffler", "Cameron Young", "Matt Fitzpatrick", "Ludvig Åberg"]),
+    ("Beto",    ["Scottie Scheffler", "Rory McIlroy", "Cameron Young", "Matt Fitzpatrick", "Justin Rose"]),
+    ("Benny",   ["Collin Morikawa", "Xander Schauffele", "Brooks Koepka", "Rory McIlroy", "Scottie Scheffler"]),
+    ("Paul",    ["Aaron Rai", "Max McGreevy", "Chris Gotterup", "Jacob Bridgeman", "Sam Burns"]),
+    ("Nick",    ["Scottie Scheffler", "Rory McIlroy", "Cameron Young", "Matt Fitzpatrick", "Rickie Fowler"]),
+    ("Pat",     ["Justin Rose", "Keegan Bradley", "Tommy Fleetwood", "Cameron Young", "Sepp Straka"]),
+]
 
 with open(r"C:\Users\jjg\SandboxSpace\PGAPool\PGAPool\earnings.json", encoding="utf-8") as f:
     earn = json.load(f)
