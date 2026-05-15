@@ -10,6 +10,9 @@ Data files (same directory):
 """
 import json, os, sys
 from datetime import datetime
+import zoneinfo
+
+PT = zoneinfo.ZoneInfo("America/Los_Angeles")
 
 # -- Pool Data ---------------------------------------------------------------
 entries = [
@@ -153,7 +156,7 @@ for i, r in enumerate(results):
         r["rank"] = i + 1
 
 has_data = use_projected or use_final
-updated = datetime.now().strftime("%B %d, %Y at %I:%M %p")
+updated = datetime.now(PT).strftime("%B %d, %Y at %I:%M %p PT")
 
 
 # -- Helpers -----------------------------------------------------------------
