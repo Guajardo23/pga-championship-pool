@@ -49,6 +49,17 @@ def main():
     state = event_status.get("type", {}).get("state", "pre")  # pre, in, post
     period = event_status.get("period", 0)
 
+    # ESPN sometimes reports period=0 during play; infer from linescores
+    if period == 0 and state == "in":
+        for c in competitors[:5]:
+            ls = c.get("linescores", [])
+            if ls:
+                period = max(l.get("period", 0) for l in ls)
+                if period > 0:
+                    break
+        if period == 0:
+            period = 1  # fallback to Round 1
+
     if state == "pre":
         round_info = "Not Started"
         status = "Not Started"
@@ -59,30 +70,32 @@ def main():
         round_info = "Final"
         status = "Complete"
 
-    golfers = {}
+    # First pass: collect all competitor data sorted by ESPN's order field
+    raw_list = []
     for c in competitors:
         athlete = c.get("athlete", {})
         name = athlete.get("displayName", "") or athlete.get("fullName", "")
         if not name:
             continue
 
-        # Overall score to par (e.g., "-4", "+2", "E")
         score = c.get("score", "")
+        order = c.get("order", 999)
 
-        # Position and thru from competitor-level status (only during/after play)
+        # Check for cut/WD/DQ from status
         c_status = c.get("status", {})
-        pos_data = c_status.get("position", {})
-        position = pos_data.get("displayName", "") if pos_data else ""
-
-        # Check for cut/WD/DQ
         c_type = c_status.get("type", {})
         c_state_name = c_type.get("name", "")
+        special = ""
         if c_state_name in ("STATUS_CUT",):
-            position = "MC"
+            special = "MC"
         elif c_state_name in ("STATUS_WD",):
-            position = "WD"
+            special = "WD"
         elif c_state_name in ("STATUS_DQ",):
-            position = "DQ"
+            special = "DQ"
+
+        # Also check position from status if available
+        pos_data = c_status.get("position", {})
+        status_pos = pos_data.get("displayName", "") if pos_data else ""
 
         # Thru
         thru = c_status.get("thru", "")
@@ -103,7 +116,6 @@ def main():
             for ls in linescores:
                 if ls.get("period") == period and "value" in ls:
                     val = ls["value"]
-                    # Only show "today" if player has finished the round
                     if thru == "F":
                         today_num = val - PAR
                         if today_num > 0:
@@ -114,11 +126,51 @@ def main():
                             today = str(today_num)
                     break
 
-        golfers[name] = {
+        raw_list.append({
+            "name": name, "score": score, "order": order,
+            "special": special, "status_pos": status_pos,
+            "today": today, "thru": thru,
+        })
+
+    # Sort by ESPN order (leaderboard rank)
+    raw_list.sort(key=lambda x: x["order"])
+
+    # Second pass: compute positions with ties using score grouping
+    # Group by score to detect ties
+    from collections import Counter
+    score_counts = Counter(p["score"] for p in raw_list if not p["special"])
+    score_to_rank = {}
+    rank = 1
+    seen_scores = []
+    for p in raw_list:
+        if p["special"]:
+            continue
+        sc = p["score"]
+        if sc not in score_to_rank:
+            score_to_rank[sc] = rank
+        rank += 1
+
+    golfers = {}
+    for p in raw_list:
+        if p["special"]:
+            position = p["special"]
+        elif p["status_pos"]:
+            position = p["status_pos"]
+        elif state != "pre" and p["score"]:
+            r = score_to_rank.get(p["score"], p["order"])
+            cnt = score_counts.get(p["score"], 1)
+            if cnt > 1:
+                position = f"T{r}"
+            else:
+                position = str(r)
+        else:
+            position = ""
+
+        golfers[p["name"]] = {
             "position": position,
-            "score": score,
-            "today": today,
-            "thru": thru,
+            "score": p["score"],
+            "today": p["today"],
+            "thru": p["thru"],
         }
 
     standings = {
