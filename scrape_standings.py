@@ -93,6 +93,16 @@ def main():
         elif c_state_name in ("STATUS_DQ",):
             special = "DQ"
 
+        # ESPN doesn't always flag MC via status; detect via linescore count.
+        # If we're in round 3+ and a player only has 2 rounds, they missed the cut.
+        linescores = c.get("linescores", [])
+        if not special and period >= 3 and len(linescores) < period:
+            special = "MC"
+        elif c_state_name in ("STATUS_WD",):
+            special = "WD"
+        elif c_state_name in ("STATUS_DQ",):
+            special = "DQ"
+
         # Also check position from status if available
         pos_data = c_status.get("position", {})
         status_pos = pos_data.get("displayName", "") if pos_data else ""
