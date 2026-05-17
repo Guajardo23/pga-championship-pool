@@ -9,290 +9,290 @@
             "today": "",
             "thru": ""
         },
-        "Hideki Matsuyama": {
+        "Justin Thomas": {
             "position": "T2",
-            "score": "-4",
-            "today": "",
-            "thru": ""
-        },
-        "Nick Taylor": {
-            "position": "T2",
-            "score": "-4",
-            "today": "",
-            "thru": ""
-        },
-        "Matti Schmid": {
-            "position": "T2",
-            "score": "-4",
+            "score": "-5",
             "today": "",
             "thru": ""
         },
         "Aaron Rai": {
             "position": "T2",
-            "score": "-4",
-            "today": "",
-            "thru": ""
-        },
-        "Jon Rahm": {
-            "position": "T2",
-            "score": "-4",
+            "score": "-5",
             "today": "",
             "thru": ""
         },
         "Ludvig Åberg": {
             "position": "T2",
+            "score": "-5",
+            "today": "",
+            "thru": ""
+        },
+        "Jon Rahm": {
+            "position": "T2",
+            "score": "-5",
+            "today": "",
+            "thru": ""
+        },
+        "Cameron Smith": {
+            "position": "T6",
+            "score": "-4",
+            "today": "",
+            "thru": ""
+        },
+        "Rory McIlroy": {
+            "position": "T6",
+            "score": "-4",
+            "today": "",
+            "thru": ""
+        },
+        "Nick Taylor": {
+            "position": "T6",
+            "score": "-4",
+            "today": "",
+            "thru": ""
+        },
+        "Matti Schmid": {
+            "position": "T6",
             "score": "-4",
             "today": "",
             "thru": ""
         },
         "Kurt Kitayama": {
-            "position": "T8",
+            "position": "T10",
             "score": "-3",
             "today": "",
             "thru": ""
         },
-        "Justin Thomas": {
-            "position": "T8",
-            "score": "-3",
-            "today": "",
-            "thru": ""
-        },
-        "Harris English": {
-            "position": "T8",
+        "Hideki Matsuyama": {
+            "position": "T10",
             "score": "-3",
             "today": "",
             "thru": ""
         },
         "Chris Gotterup": {
-            "position": "T8",
+            "position": "T10",
             "score": "-3",
             "today": "",
             "thru": ""
         },
-        "Cameron Smith": {
-            "position": "T8",
+        "Ben Griffin": {
+            "position": "T10",
             "score": "-3",
             "today": "",
             "thru": ""
         },
         "Justin Rose": {
-            "position": "T8",
+            "position": "T10",
             "score": "-3",
             "today": "",
             "thru": ""
         },
         "Joaquín Niemann": {
-            "position": "T8",
-            "score": "-3",
-            "today": "",
-            "thru": ""
-        },
-        "Xander Schauffele": {
-            "position": "T8",
-            "score": "-3",
-            "today": "",
-            "thru": ""
-        },
-        "Rory McIlroy": {
-            "position": "T8",
-            "score": "-3",
-            "today": "",
-            "thru": ""
-        },
-        "Patrick Reed": {
-            "position": "T8",
+            "position": "T10",
             "score": "-3",
             "today": "",
             "thru": ""
         },
         "Maverick McNealy": {
-            "position": "T8",
+            "position": "T10",
+            "score": "-3",
+            "today": "",
+            "thru": ""
+        },
+        "Xander Schauffele": {
+            "position": "T10",
             "score": "-3",
             "today": "",
             "thru": ""
         },
         "Matt Fitzpatrick": {
-            "position": "T19",
+            "position": "T18",
             "score": "-2",
             "today": "",
             "thru": ""
         },
-        "Daniel Hillier": {
-            "position": "T19",
+        "David Puig": {
+            "position": "T18",
             "score": "-2",
             "today": "",
             "thru": ""
         },
-        "Ben Griffin": {
-            "position": "T19",
+        "Scottie Scheffler": {
+            "position": "T18",
             "score": "-2",
             "today": "",
             "thru": ""
         },
-        "Martin Kaymer": {
-            "position": "T19",
+        "Harris English": {
+            "position": "T18",
             "score": "-2",
             "today": "",
             "thru": ""
         },
         "Bud Cauley": {
-            "position": "T19",
+            "position": "T18",
             "score": "-2",
             "today": "",
             "thru": ""
         },
-        "Kristoffer Reitan": {
-            "position": "T19",
+        "Patrick Reed": {
+            "position": "T18",
             "score": "-2",
             "today": "",
             "thru": ""
         },
-        "Chris Kirk": {
-            "position": "T19",
-            "score": "-2",
-            "today": "",
-            "thru": ""
-        },
-        "Cameron Young": {
-            "position": "T26",
-            "score": "-1",
-            "today": "",
-            "thru": ""
-        },
-        "Michael Kim": {
-            "position": "T26",
-            "score": "-1",
-            "today": "",
-            "thru": ""
-        },
-        "Tom Hoge": {
-            "position": "T26",
-            "score": "-1",
-            "today": "",
-            "thru": ""
-        },
-        "David Puig": {
-            "position": "T26",
-            "score": "-1",
-            "today": "",
-            "thru": ""
-        },
-        "Scottie Scheffler": {
-            "position": "T26",
+        "Brooks Koepka": {
+            "position": "T24",
             "score": "-1",
             "today": "",
             "thru": ""
         },
         "Min Woo Lee": {
-            "position": "T26",
+            "position": "T24",
             "score": "-1",
             "today": "",
             "thru": ""
         },
         "Max Greyserman": {
-            "position": "T26",
+            "position": "T24",
+            "score": "-1",
+            "today": "",
+            "thru": ""
+        },
+        "Martin Kaymer": {
+            "position": "T24",
             "score": "-1",
             "today": "",
             "thru": ""
         },
         "Alex Noren": {
-            "position": "T33",
-            "score": "E",
-            "today": "",
-            "thru": ""
-        },
-        "Daniel Berger": {
-            "position": "T33",
-            "score": "E",
-            "today": "",
-            "thru": ""
-        },
-        "Ryan Fox": {
-            "position": "T33",
+            "position": "T28",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Jordan Spieth": {
-            "position": "T33",
+            "position": "T28",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Stephan Jaeger": {
-            "position": "T33",
+            "position": "T28",
+            "score": "E",
+            "today": "",
+            "thru": ""
+        },
+        "Daniel Hillier": {
+            "position": "T28",
+            "score": "E",
+            "today": "",
+            "thru": ""
+        },
+        "Cameron Young": {
+            "position": "T28",
+            "score": "E",
+            "today": "",
+            "thru": ""
+        },
+        "Tom Hoge": {
+            "position": "T28",
+            "score": "E",
+            "today": "",
+            "thru": ""
+        },
+        "Michael Kim": {
+            "position": "T28",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Sam Burns": {
-            "position": "T33",
+            "position": "T28",
             "score": "E",
             "today": "",
             "thru": ""
         },
-        "Mikael Lindberg": {
-            "position": "T33",
+        "Chris Kirk": {
+            "position": "T28",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Christiaan Bezuidenhout": {
-            "position": "T40",
+            "position": "T37",
+            "score": "+1",
+            "today": "",
+            "thru": ""
+        },
+        "Daniel Berger": {
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Ryo Hisatsune": {
-            "position": "T40",
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Patrick Cantlay": {
-            "position": "T40",
+            "position": "T37",
+            "score": "+1",
+            "today": "",
+            "thru": ""
+        },
+        "Ryan Fox": {
+            "position": "T37",
+            "score": "+1",
+            "today": "",
+            "thru": ""
+        },
+        "Haotong Li": {
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Aldrich Potgieter": {
-            "position": "T40",
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Dustin Johnson": {
-            "position": "T40",
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
         },
-        "Nicolai Højgaard": {
-            "position": "T40",
+        "Andrew Novak": {
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Padraig Harrington": {
-            "position": "T40",
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
         },
-        "Rickie Fowler": {
-            "position": "T40",
+        "Nicolai Højgaard": {
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
         },
-        "Brian Harman": {
-            "position": "T40",
+        "Mikael Lindberg": {
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
         },
-        "Brooks Koepka": {
-            "position": "T40",
+        "Kristoffer Reitan": {
+            "position": "T37",
             "score": "+1",
             "today": "",
             "thru": ""
@@ -315,7 +315,19 @@
             "today": "",
             "thru": ""
         },
+        "Denny McCarthy": {
+            "position": "T50",
+            "score": "+2",
+            "today": "",
+            "thru": ""
+        },
         "Chandler Blanchet": {
+            "position": "T50",
+            "score": "+2",
+            "today": "",
+            "thru": ""
+        },
+        "Taylor Pendrith": {
             "position": "T50",
             "score": "+2",
             "today": "",
@@ -327,122 +339,110 @@
             "today": "",
             "thru": ""
         },
-        "Andrew Novak": {
+        "Rickie Fowler": {
+            "position": "T50",
+            "score": "+2",
+            "today": "",
+            "thru": ""
+        },
+        "Brian Harman": {
             "position": "T50",
             "score": "+2",
             "today": "",
             "thru": ""
         },
         "Collin Morikawa": {
-            "position": "T56",
+            "position": "T59",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Corey Conners": {
-            "position": "T56",
-            "score": "+3",
-            "today": "",
-            "thru": ""
-        },
-        "Denny McCarthy": {
-            "position": "T56",
-            "score": "+3",
-            "today": "",
-            "thru": ""
-        },
-        "Haotong Li": {
-            "position": "T56",
-            "score": "+3",
-            "today": "",
-            "thru": ""
-        },
-        "Rico Hoey": {
-            "position": "T56",
-            "score": "+3",
-            "today": "",
-            "thru": ""
-        },
-        "Taylor Pendrith": {
-            "position": "T56",
+            "position": "T59",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Sami Välimäki": {
-            "position": "T62",
+            "position": "T61",
             "score": "+4",
             "today": "",
             "thru": ""
         },
         "Sahith Theegala": {
-            "position": "T62",
+            "position": "T61",
+            "score": "+4",
+            "today": "",
+            "thru": ""
+        },
+        "Rico Hoey": {
+            "position": "T61",
             "score": "+4",
             "today": "",
             "thru": ""
         },
         "Andrew Putnam": {
-            "position": "T62",
+            "position": "T61",
             "score": "+4",
             "today": "",
             "thru": ""
         },
-        "Kazuki Higa": {
-            "position": "65",
-            "score": "+5",
-            "today": "",
-            "thru": ""
-        },
         "Casey Jarvis": {
-            "position": "T66",
+            "position": "T65",
             "score": "+6",
             "today": "",
             "thru": ""
         },
         "Rasmus Højgaard": {
-            "position": "T66",
+            "position": "T65",
             "score": "+6",
             "today": "",
             "thru": ""
         },
         "Jason Day": {
-            "position": "T66",
+            "position": "T65",
             "score": "+6",
             "today": "",
             "thru": ""
         },
         "Keith Mitchell": {
-            "position": "T66",
+            "position": "T65",
             "score": "+6",
             "today": "",
             "thru": ""
         },
         "Sam Stevens": {
-            "position": "T66",
+            "position": "T65",
             "score": "+6",
             "today": "",
             "thru": ""
         },
         "Luke Donald": {
-            "position": "T71",
+            "position": "T70",
             "score": "+7",
             "today": "",
             "thru": ""
         },
         "John Parry": {
-            "position": "T71",
+            "position": "T70",
             "score": "+7",
             "today": "",
             "thru": ""
         },
         "William Mouw": {
-            "position": "T71",
+            "position": "T70",
             "score": "+7",
             "today": "",
             "thru": ""
         },
         "Ryan Gerard": {
-            "position": "T71",
+            "position": "T70",
+            "score": "+7",
+            "today": "",
+            "thru": ""
+        },
+        "Kazuki Higa": {
+            "position": "T70",
             "score": "+7",
             "today": "",
             "thru": ""
@@ -472,20 +472,20 @@
             "thru": ""
         },
         "Johnny Keefer": {
-            "position": "T79",
-            "score": "+9",
-            "today": "",
-            "thru": ""
-        },
-        "Michael Brennan": {
-            "position": "T79",
+            "position": "79",
             "score": "+9",
             "today": "",
             "thru": ""
         },
         "Ben Kern": {
-            "position": "81",
+            "position": "80",
             "score": "+10",
+            "today": "",
+            "thru": ""
+        },
+        "Michael Brennan": {
+            "position": "81",
+            "score": "+11",
             "today": "",
             "thru": ""
         },
