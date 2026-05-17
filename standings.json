@@ -141,6 +141,12 @@
             "today": "",
             "thru": ""
         },
+        "Jordan Spieth": {
+            "position": "T24",
+            "score": "-1",
+            "today": "",
+            "thru": ""
+        },
         "Brian Harman": {
             "position": "T24",
             "score": "-1",
@@ -190,91 +196,85 @@
             "thru": ""
         },
         "Ryan Fox": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Haotong Li": {
-            "position": "T32",
-            "score": "E",
-            "today": "",
-            "thru": ""
-        },
-        "Jordan Spieth": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Justin Thomas": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Aldrich Potgieter": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Nicolai Højgaard": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Padraig Harrington": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Michael Kim": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Dustin Johnson": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Tom Hoge": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Andrew Putnam": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Daniel Hillier": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Andrew Novak": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Si Woo Kim": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
         "Cameron Young": {
-            "position": "T32",
+            "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
@@ -339,12 +339,6 @@
             "today": "",
             "thru": ""
         },
-        "Shane Lowry": {
-            "position": "T57",
-            "score": "+2",
-            "today": "",
-            "thru": ""
-        },
         "Christiaan Bezuidenhout": {
             "position": "T57",
             "score": "+2",
@@ -370,37 +364,43 @@
             "thru": ""
         },
         "Jason Day": {
-            "position": "T62",
+            "position": "T61",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Matt Wallace": {
-            "position": "T62",
+            "position": "T61",
+            "score": "+3",
+            "today": "",
+            "thru": ""
+        },
+        "Shane Lowry": {
+            "position": "T61",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Sami Välimäki": {
-            "position": "T62",
+            "position": "T61",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "John Parry": {
-            "position": "T62",
+            "position": "T61",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Corey Conners": {
-            "position": "T62",
+            "position": "T61",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Sam Stevens": {
-            "position": "T62",
+            "position": "T61",
             "score": "+3",
             "today": "",
             "thru": ""
