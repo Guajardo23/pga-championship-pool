@@ -207,12 +207,6 @@
             "today": "",
             "thru": ""
         },
-        "Haotong Li": {
-            "position": "T33",
-            "score": "E",
-            "today": "",
-            "thru": ""
-        },
         "Justin Thomas": {
             "position": "T33",
             "score": "E",
@@ -286,49 +280,55 @@
             "thru": ""
         },
         "Alex Noren": {
-            "position": "T48",
+            "position": "T47",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Patrick Cantlay": {
-            "position": "T48",
+            "position": "T47",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Matt Fitzpatrick": {
-            "position": "T48",
+            "position": "T47",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Daniel Berger": {
-            "position": "T48",
+            "position": "T47",
+            "score": "+1",
+            "today": "",
+            "thru": ""
+        },
+        "Haotong Li": {
+            "position": "T47",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Kazuki Higa": {
-            "position": "T48",
+            "position": "T47",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Rico Hoey": {
-            "position": "T48",
+            "position": "T47",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Taylor Pendrith": {
-            "position": "T48",
+            "position": "T47",
             "score": "+1",
             "today": "",
             "thru": ""
         },
         "Stephan Jaeger": {
-            "position": "T48",
+            "position": "T47",
             "score": "+1",
             "today": "",
             "thru": ""
@@ -453,12 +453,6 @@
             "today": "",
             "thru": ""
         },
-        "Rasmus Neergaard-Petersen": {
-            "position": "T76",
-            "score": "+7",
-            "today": "",
-            "thru": ""
-        },
         "Ryan Gerard": {
             "position": "T76",
             "score": "+7",
@@ -472,13 +466,19 @@
             "thru": ""
         },
         "Elvis Smylie": {
-            "position": "T79",
+            "position": "T78",
+            "score": "+8",
+            "today": "",
+            "thru": ""
+        },
+        "Rasmus Neergaard-Petersen": {
+            "position": "T78",
             "score": "+8",
             "today": "",
             "thru": ""
         },
         "Alex Fitzpatrick": {
-            "position": "T79",
+            "position": "T78",
             "score": "+8",
             "today": "",
             "thru": ""
