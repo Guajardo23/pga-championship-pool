@@ -195,13 +195,13 @@
             "today": "",
             "thru": ""
         },
-        "Matt Fitzpatrick": {
+        "Ryo Hisatsune": {
             "position": "T33",
             "score": "E",
             "today": "",
             "thru": ""
         },
-        "Ryo Hisatsune": {
+        "Matt Fitzpatrick": {
             "position": "T33",
             "score": "E",
             "today": "",
@@ -237,6 +237,12 @@
             "today": "",
             "thru": ""
         },
+        "Dustin Johnson": {
+            "position": "T33",
+            "score": "E",
+            "today": "",
+            "thru": ""
+        },
         "Andrew Putnam": {
             "position": "T33",
             "score": "E",
@@ -262,12 +268,6 @@
             "thru": ""
         },
         "Michael Kim": {
-            "position": "T33",
-            "score": "E",
-            "today": "",
-            "thru": ""
-        },
-        "Dustin Johnson": {
             "position": "T33",
             "score": "E",
             "today": "",
@@ -339,6 +339,18 @@
             "today": "",
             "thru": ""
         },
+        "Jason Day": {
+            "position": "T57",
+            "score": "+2",
+            "today": "",
+            "thru": ""
+        },
+        "Corey Conners": {
+            "position": "T57",
+            "score": "+2",
+            "today": "",
+            "thru": ""
+        },
         "Patrick Cantlay": {
             "position": "T57",
             "score": "+2",
@@ -358,43 +370,31 @@
             "thru": ""
         },
         "Collin Morikawa": {
-            "position": "T60",
-            "score": "+3",
-            "today": "",
-            "thru": ""
-        },
-        "Jason Day": {
-            "position": "T60",
+            "position": "T62",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Matt Wallace": {
-            "position": "T60",
+            "position": "T62",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Shane Lowry": {
-            "position": "T60",
-            "score": "+3",
-            "today": "",
-            "thru": ""
-        },
-        "Corey Conners": {
-            "position": "T60",
+            "position": "T62",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Sam Stevens": {
-            "position": "T60",
+            "position": "T62",
             "score": "+3",
             "today": "",
             "thru": ""
         },
         "Jhonattan Vegas": {
-            "position": "T60",
+            "position": "T62",
             "score": "+3",
             "today": "",
             "thru": ""
@@ -423,26 +423,26 @@
             "today": "",
             "thru": ""
         },
-        "William Mouw": {
-            "position": "T71",
-            "score": "+5",
-            "today": "",
-            "thru": ""
-        },
         "Keith Mitchell": {
-            "position": "T71",
+            "position": "71",
             "score": "+5",
             "today": "",
             "thru": ""
         },
         "Casey Jarvis": {
-            "position": "T73",
+            "position": "T72",
             "score": "+6",
             "today": "",
             "thru": ""
         },
         "Rasmus Højgaard": {
-            "position": "T73",
+            "position": "T72",
+            "score": "+6",
+            "today": "",
+            "thru": ""
+        },
+        "William Mouw": {
+            "position": "T72",
             "score": "+6",
             "today": "",
             "thru": ""
