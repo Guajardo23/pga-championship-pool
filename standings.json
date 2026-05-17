@@ -327,12 +327,6 @@
             "today": "",
             "thru": ""
         },
-        "Rico Hoey": {
-            "position": "T48",
-            "score": "+1",
-            "today": "",
-            "thru": ""
-        },
         "Stephan Jaeger": {
             "position": "T48",
             "score": "+1",
@@ -340,25 +334,31 @@
             "thru": ""
         },
         "Patrick Cantlay": {
-            "position": "T57",
+            "position": "T56",
             "score": "+2",
             "today": "",
             "thru": ""
         },
         "Jhonattan Vegas": {
-            "position": "T57",
+            "position": "T56",
             "score": "+2",
             "today": "",
             "thru": ""
         },
         "Denny McCarthy": {
-            "position": "T57",
+            "position": "T56",
             "score": "+2",
             "today": "",
             "thru": ""
         },
         "Chandler Blanchet": {
-            "position": "T57",
+            "position": "T56",
+            "score": "+2",
+            "today": "",
+            "thru": ""
+        },
+        "Rico Hoey": {
+            "position": "T56",
             "score": "+2",
             "today": "",
             "thru": ""
@@ -376,12 +376,6 @@
             "thru": ""
         },
         "Matt Wallace": {
-            "position": "T61",
-            "score": "+3",
-            "today": "",
-            "thru": ""
-        },
-        "John Parry": {
             "position": "T61",
             "score": "+3",
             "today": "",
@@ -405,14 +399,20 @@
             "today": "",
             "thru": ""
         },
+        "John Parry": {
+            "position": "T67",
+            "score": "+4",
+            "today": "",
+            "thru": ""
+        },
         "Daniel Brown": {
-            "position": "T68",
+            "position": "T67",
             "score": "+4",
             "today": "",
             "thru": ""
         },
         "Johnny Keefer": {
-            "position": "T68",
+            "position": "T67",
             "score": "+4",
             "today": "",
             "thru": ""
