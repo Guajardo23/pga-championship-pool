@@ -285,6 +285,12 @@
             "today": "",
             "thru": ""
         },
+        "Christiaan Bezuidenhout": {
+            "position": "T48",
+            "score": "+1",
+            "today": "",
+            "thru": ""
+        },
         "Matt Fitzpatrick": {
             "position": "T48",
             "score": "+1",
@@ -327,39 +333,39 @@
             "today": "",
             "thru": ""
         },
-        "Christiaan Bezuidenhout": {
-            "position": "T55",
-            "score": "+2",
-            "today": "",
-            "thru": ""
-        },
         "Patrick Cantlay": {
-            "position": "T55",
+            "position": "T56",
             "score": "+2",
             "today": "",
             "thru": ""
         },
         "Sahith Theegala": {
-            "position": "T55",
+            "position": "T56",
             "score": "+2",
             "today": "",
             "thru": ""
         },
         "Jhonattan Vegas": {
-            "position": "T55",
+            "position": "T56",
             "score": "+2",
             "today": "",
             "thru": ""
         },
         "Denny McCarthy": {
-            "position": "T55",
+            "position": "T56",
             "score": "+2",
             "today": "",
             "thru": ""
         },
         "Chandler Blanchet": {
-            "position": "T55",
+            "position": "T56",
             "score": "+2",
+            "today": "",
+            "thru": ""
+        },
+        "Collin Morikawa": {
+            "position": "T61",
+            "score": "+3",
             "today": "",
             "thru": ""
         },
@@ -399,20 +405,14 @@
             "today": "",
             "thru": ""
         },
-        "Collin Morikawa": {
-            "position": "T67",
+        "Johnny Keefer": {
+            "position": "T68",
             "score": "+4",
             "today": "",
             "thru": ""
         },
         "Daniel Brown": {
-            "position": "T67",
-            "score": "+4",
-            "today": "",
-            "thru": ""
-        },
-        "Johnny Keefer": {
-            "position": "T67",
+            "position": "T68",
             "score": "+4",
             "today": "",
             "thru": ""
@@ -453,6 +453,12 @@
             "today": "",
             "thru": ""
         },
+        "Elvis Smylie": {
+            "position": "T76",
+            "score": "+7",
+            "today": "",
+            "thru": ""
+        },
         "Ryan Gerard": {
             "position": "T76",
             "score": "+7",
@@ -471,14 +477,8 @@
             "today": "",
             "thru": ""
         },
-        "Elvis Smylie": {
-            "position": "T79",
-            "score": "+8",
-            "today": "",
-            "thru": ""
-        },
         "Rasmus Neergaard-Petersen": {
-            "position": "T79",
+            "position": "80",
             "score": "+8",
             "today": "",
             "thru": ""
