@@ -1,11 +1,11 @@
 """Sunday final round live updater.
 
-Runs auto_update.py every 5 minutes from noon-5pm ET.
+Runs auto_update.py every 5 minutes until 5pm PT.
 Keeps your PC awake during the window by preventing sleep via Windows API.
 
 Usage:
-    python sunday_live.py          # Runs noon-5pm ET
-    python sunday_live.py --now    # Start immediately (for testing)
+    python sunday_live.py          # Runs noon-5pm PT
+    python sunday_live.py --now    # Start immediately, runs until 5pm PT
 """
 import ctypes, subprocess, sys, os, time
 from datetime import datetime, timedelta
@@ -13,7 +13,7 @@ import zoneinfo
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PYTHON = sys.executable
-ET = zoneinfo.ZoneInfo("America/New_York")
+PT = zoneinfo.ZoneInfo("America/Los_Angeles")
 
 # Windows sleep prevention
 ES_CONTINUOUS = 0x80000000
@@ -36,7 +36,7 @@ def allow_sleep():
 
 
 def run_update():
-    ts = datetime.now(ET).strftime("%I:%M:%S %p ET")
+    ts = datetime.now(PT).strftime("%I:%M:%S %p PT")
     print(f"\n[{ts}] Running update...")
     result = subprocess.run(
         [PYTHON, os.path.join(BASE_DIR, "auto_update.py")],
@@ -52,42 +52,43 @@ def main():
     start_now = "--now" in sys.argv
     interval = 300  # 5 minutes
 
-    now_et = datetime.now(ET)
-    today = now_et.date()
+    now_pt = datetime.now(PT)
+    today = now_pt.date()
+
+    # Always end at 5pm PT
+    end_time = datetime(today.year, today.month, today.day, 17, 0, tzinfo=PT)
+
+    if now_pt >= end_time:
+        print("Past 5pm PT. Nothing to do.")
+        return
 
     if start_now:
-        start_time = now_et
-        end_time = now_et + timedelta(hours=5)
-        print(f"Starting immediately. Will run until {end_time.strftime('%I:%M %p ET')}.")
+        start_time = now_pt
+        print(f"Starting immediately. Will run until {end_time.strftime('%I:%M %p PT')}.")
     else:
-        start_time = datetime(today.year, today.month, today.day, 12, 0, tzinfo=ET)
-        end_time = datetime(today.year, today.month, today.day, 17, 0, tzinfo=ET)
+        start_time = datetime(today.year, today.month, today.day, 9, 0, tzinfo=PT)
 
-        if now_et >= end_time:
-            print("Past 5pm ET. Nothing to do.")
-            return
-
-        if now_et < start_time:
-            wait = (start_time - now_et).total_seconds()
-            print(f"Waiting until noon ET ({int(wait // 60)} minutes)...")
+        if now_pt < start_time:
+            wait = (start_time - now_pt).total_seconds()
+            print(f"Waiting until 9am PT ({int(wait // 60)} minutes)...")
             print("(Your PC will stay awake.)")
             prevent_sleep()
             time.sleep(wait)
 
-    print(f"\nLive updates every 5 minutes until {end_time.strftime('%I:%M %p ET')}.")
+    print(f"\nLive updates every 5 minutes until {end_time.strftime('%I:%M %p PT')}.")
     print("Press Ctrl+C to stop early.\n")
 
     prevent_sleep()
     try:
-        while datetime.now(ET) < end_time:
+        while datetime.now(PT) < end_time:
             run_update()
-            next_run = datetime.now(ET) + timedelta(seconds=interval)
+            next_run = datetime.now(PT) + timedelta(seconds=interval)
             if next_run >= end_time:
                 break
-            wait = (next_run - datetime.now(ET)).total_seconds()
+            wait = (next_run - datetime.now(PT)).total_seconds()
             if wait > 0:
                 next_str = next_run.strftime("%I:%M:%S %p")
-                print(f"Next update at {next_str} ET...")
+                print(f"Next update at {next_str} PT...")
                 time.sleep(wait)
     except KeyboardInterrupt:
         print("\nStopped by user.")
