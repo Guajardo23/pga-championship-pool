@@ -1,14 +1,8 @@
 name: Update PGA Championship Standings
 
+# Tournament complete - scheduled updates disabled
 on:
-  schedule:
-    # Thu-Sat (May 14-16): every hour, 7am-4pm ET (11:00-20:00 UTC)
-    - cron: '0 11-20 14-16 5 *'
-    # Sun (May 17): every hour, 8am-noon ET (12:00-16:00 UTC)
-    - cron: '0 12-15 17 5 *'
-    # Sun (May 17): every 5 min, noon-5pm ET (16:00-21:00 UTC)
-    - cron: '*/5 16-21 17 5 *'
-  workflow_dispatch:  # manual trigger button in GitHub UI
+  workflow_dispatch:  # manual trigger only
 
 permissions:
   contents: write
